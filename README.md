@@ -17,8 +17,8 @@ Il prodotto è realizzato tramite l'integrazione dei seguenti componenti:
 
 | Componente |Descrizione  |Versione |
 |--|--|--|
-|[APIOPSAN](https://github.com/regione-piemonte/webappmed-fse/apiopsan) |API REST trasversali per l'operatore sanitario per l'accesso ai dati del FSE | 1.0.0 | 
-|[PWAMED](https://github.com/regione-piemonte/webappmed-fse/pwamed) | Front-end della PWA per l'operatore sanitario | 1.0.0 |
+|[APIOPSAN](apiopsan) |API REST trasversali per l'operatore sanitario per l'accesso ai dati del FSE | 1.0.0 | 
+|[PWAMED](pwamed) | Front-end della PWA per l'operatore sanitario | 1.0.0 |
 
 ## Prerequisiti
 I prerequisiti per l'installazione dell'applicativo sono i seguenti:
@@ -47,4 +47,4 @@ Per la gestione del codice sorgente viene utilizzata la metodologia [Semantic Ve
 © Copyright Regione Piemonte – 2023
 
 ## Licenza
-SPDX-License-Identifier: EUPL-1.2 (si veda il file [LICENSE.txt](https://github.com/regione-piemonte/webappmed-fse/LICENSE.txt))
+SPDX-License-Identifier: EUPL-1.2 (si veda il file [LICENSE.txt](LICENSE.txt))
