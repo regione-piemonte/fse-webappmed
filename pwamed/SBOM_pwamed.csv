@@ -1,0 +1,51 @@
+name *,version *,license *,copyrights *,end-of-support,dependencies,language,repository,email,URL
+@firebase/app,69,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Fapp
+@firebase/app-types,61,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Fapp-types
+@firebase/component,117,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Fcomponent
+@firebase/installations,415,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Finstallations
+@firebase/installations-types,34,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Finstallations-types
+@firebase/logger,26,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Flogger
+@firebase/messaging,621,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Fmessaging
+@firebase/messaging-types,45,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Fmessaging-types
+@firebase/util,30,Apache-2.0,Copyright 2017 Google LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/%40firebase%2Futil
+@quasar/extras,195,MIT,Copyright (c) 2015-present Razvan Stoenescu,-,-,nodejs,-,-,https://www.npmjs.com/package/%40quasar%2Fextras
+@types/chart.js,2937,MIT,Copyrights are respective of each contributor listed at the beginning of each definition file,-,-,nodejs,-,-,https://www.npmjs.com/package/%40types%2Fchart.js
+animejs,321,MIT,Copyright (c) 2019 Julian Garnier,-,-,nodejs,-,-,https://www.npmjs.com/package/animejs
+aos,234,MIT,Copyright (c) 2015 Micha? Sajn¢g,-,-,nodejs,-,-,https://www.npmjs.com/package/aos
+axios,211,MIT,Copyright (c) 2014-present Matt Zabriskie,-,-,nodejs,-,-,https://www.npmjs.com/package/axios
+axios-mock-adapter,1182,MIT,Copyright (c) Colin Timmermans,-,-,nodejs,-,-,https://www.npmjs.com/package/axios-mock-adapter
+capital-case,104,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/capital-case
+change-case,412,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/change-case
+chart.js,294,MIT,Copyright (c) 2014-2022 Chart.js Contributors,-,-,nodejs,-,-,https://www.npmjs.com/package/chart.js
+chartjs-color,241,MIT,Copyright (c) 2012 Heather Arthur,-,-,nodejs,-,-,https://www.npmjs.com/package/chartjs-color
+chartjs-color-string,60,MIT,Copyright (c) 2011 Heather Arthur <fayearthur@gmail.com>,-,-,nodejs,-,-,https://www.npmjs.com/package/chartjs-color-string
+chartjs-plugin-datalabels,70,MIT,Copyright (c) 2017-2021 chartjs-plugin-datalabels contributors,-,-,nodejs,-,-,https://www.npmjs.com/package/chartjs-plugin-datalabels
+classlist-polyfill,120,Unlicense,,-,-,nodejs,-,-,https://www.npmjs.com/package/classlist-polyfill
+color-convert,193,MIT,Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>.Copyright (c) 2016-2021 Josh Junon <josh@junon.me>.,-,-,nodejs,-,-,https://www.npmjs.com/package/color-convert
+color-name,113,MIT,Copyright (c) 2015 Dmitry Ivanov,-,-,nodejs,-,-,https://www.npmjs.com/package/color-name
+constant-case,304,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/constant-case
+core-js,365,MIT,Copyright (c) 2014-2023 Denis Pushkarev,-,-,nodejs,-,-,https://www.npmjs.com/package/core-js
+dom-storage,210,Apache-2.0,,-,-,nodejs,-,-,https://www.npmjs.com/package/dom-storage
+dot-case,304,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/dot-case
+faker,510,MIT,,-,-,nodejs,-,-,https://www.npmjs.com/package/faker
+fast-deep-equal,313,MIT,Copyright (c) 2017 Evgeny Poberezkin,-,-,nodejs,-,-,https://www.npmjs.com/package/fast-deep-equal
+file-saver,205,MIT,Copyright Copyright 2016 [Eli Grey][1].,-,-,nodejs,-,-,https://www.npmjs.com/package/file-saver
+follow-redirects,1152,MIT,Copyright 2014?present Olivier Lalonde <olalonde@gmail.com>, James Talmage <james@talmage.io>, Ruben Verborgh,-,-,nodejs,-,-,https://www.npmjs.com/package/follow-redirects
+header-case,204,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/header-case
+idb,302,ISC,Copyright (c) 2016, Jake Archibald <jaffathecake@gmail.com>,-,-,nodejs,-,-,https://www.npmjs.com/package/idb
+is-buffer,205,MIT,Copyright (c) Feross Aboukhadijeh,-,-,nodejs,-,-,https://www.npmjs.com/package/is-buffer
+lodash.debounce,408,MIT,Copyright and related rights for sample code are waived via CC0. Samplecode is defined as all source code displayed within the prose of thedocumentation.,-,-,nodejs,-,-,https://www.npmjs.com/package/lodash.debounce
+lodash.throttle,411,MIT,Copyright and related rights for sample code are waived via CC0. Samplecode is defined as all source code displayed within the prose of thedocumentation.,-,-,nodejs,-,-,https://www.npmjs.com/package/lodash.throttle
+moment,2270,MIT,Copyright (c) JS Foundation and other contributors,-,-,nodejs,-,-,https://www.npmjs.com/package/moment
+no-case,304,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/no-case
+pascal-case,312,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/pascal-case
+path-case,304,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/path-case
+quasar,1191,MIT,Copyright (c) 2015-present Razvan Stoenescu,-,-,nodejs,-,-,https://www.npmjs.com/package/quasar
+sentence-case,304,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/sentence-case
+snake-case,304,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/snake-case
+tslib,1130,0BSD,Copyright (c) Microsoft Corporation.,-,-,nodejs,-,-,https://www.npmjs.com/package/tslib
+upper-case,202,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/upper-case
+upper-case-first,202,MIT,Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com),-,-,nodejs,-,-,https://www.npmjs.com/package/upper-case-first
+vue-chartjs,351,MIT,Copyright (c) 2016 Jakub Juszczak,-,-,nodejs,-,-,https://www.npmjs.com/package/vue-chartjs
+vue-sync,320,WTFPL,,-,-,nodejs,-,-,https://www.npmjs.com/package/vue-sync
+xmlhttprequest,180,MIT,Copyright (c) 2010 passive.ly LLC,-,-,nodejs,-,-,https://www.npmjs.com/package/xmlhttprequest

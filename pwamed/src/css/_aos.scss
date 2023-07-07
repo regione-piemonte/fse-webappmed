@@ -1,0 +1,77 @@
+$aos-distance-xs: 48px !default;
+$aos-distance-sm: 64px !default;
+
+$aos-distances: (
+  "xs": $aos-distance-xs,
+  "sm": $aos-distance-sm
+);
+
+@each $size, $distance in $aos-distances {
+  // FADE
+  // ----
+  [data-aos="fade-up-#{$size}"] {
+    transform: translate3d(0, $distance, 0);
+  }
+
+  [data-aos="fade-down-#{$size}"] {
+    transform: translate3d(0, -$distance, 0);
+  }
+
+  [data-aos="fade-right-#{$size}"] {
+    transform: translate3d(-$distance, 0, 0);
+  }
+
+  [data-aos="fade-left-#{$size}"] {
+    transform: translate3d($distance, 0, 0);
+  }
+
+  [data-aos="fade-up-right-#{$size}"] {
+    transform: translate3d(-$distance, $distance, 0);
+  }
+
+  [data-aos="fade-up-left-#{$size}"] {
+    transform: translate3d($distance, $distance, 0);
+  }
+
+  [data-aos="fade-down-right-#{$size}"] {
+    transform: translate3d(-$distance, -$distance, 0);
+  }
+
+  [data-aos="fade-down-left-#{$size}"] {
+    transform: translate3d($distance, -$distance, 0);
+  }
+
+  // ZOOM
+  // ----
+  [data-aos="zoom-in-up-#{$size}"] {
+    transform: translate3d(0, $distance, 0) scale(0.6);
+  }
+
+  [data-aos="zoom-in-down-#{$size}"] {
+    transform: translate3d(0, -$distance, 0) scale(0.6);
+  }
+
+  [data-aos="zoom-in-right-#{$size}"] {
+    transform: translate3d(-$distance, 0, 0) scale(0.6);
+  }
+
+  [data-aos="zoom-in-left-#{$size}"] {
+    transform: translate3d($distance, 0, 0) scale(0.6);
+  }
+
+  [data-aos="zoom-out-up-#{$size}"] {
+    transform: translate3d(0, $distance, 0) scale(1.2);
+  }
+
+  [data-aos="zoom-out-down-#{$size}"] {
+    transform: translate3d(0, -$distance, 0) scale(1.2);
+  }
+
+  [data-aos="zoom-out-right-#{$size}"] {
+    transform: translate3d(-$distance, 0, 0) scale(1.2);
+  }
+
+  [data-aos="zoom-out-left-#{$size}"] {
+    transform: translate3d($distance, 0, 0) scale(1.2);
+  }
+}

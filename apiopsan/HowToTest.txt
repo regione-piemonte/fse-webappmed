@@ -1,0 +1,20 @@
+L'ambiente di test è stato già configurato in modo da essere compatibile con tutte le librerie di sviluppo già 
+presenti e con quelle installate su WildFly. Il file build.properties è stato modificato in modo da escludere i jar
+già presenti su WildFly o non utili o dannosi ai fini del deploy
+
+Il framework di test è Spring Test insieme a JUnit (versione 4)
+
+Per eseguire il test basta eseguire da eclipse la classe avente metodi annotati come test unitari come task "JUnit"
+
+Prima di eseguire i test, occorre avere le cartelle 
+test/java
+test/resource
+impostate come source folders
+
+Per essere sicuri di gestire correttamente tutte le dipendenze, occorre cancellare tutti i jar presenti nella cartella "lib"
+ed eseguire un target ant "compile-all" in modo da scaricare le vecchie ed i nuovi jar, successivamente aggiungere come
+dipendenze i jar presenti nella cartella "lib-ext" ad eccezione di 
+
+cxf-rt-frontend-jaxws-3.3.2.jar
+
+mantenuta come backup ma in futuro da eliminare.

@@ -1,0 +1,93 @@
+name *,version *,license *,copyrights *,end-of-support,dependencies,language,repository,email,URL
+aopalliance:aopalliance,1.0,PUBDOM,,-,,java,-,-,https://mvnrepository.com/artifact/aopalliance/aopalliance
+apiopsan-common,--,Apache-2.0,,-,,java,-,-,
+apiopsan-dependencies,--,Apache-2.0,,-,,java,-,-,
+cglib:cglib,2.2.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/cglib/cglib
+cglib:cglib-nodep,2.1_3,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/cglib/cglib-nodep
+com.fasterxml.jackson.core:jackson-annotations,2.12.1,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+com.fasterxml.jackson.core:jackson-core,2.12.1,Apache-2.0,Copyright (c) 2007 Tatu Saloranta, tatu.salorantaiki.fi/,-,,java,-,-,https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+com.fasterxml.jackson.core:jackson-databind,2.12.1,Apache-2.0,Copyright 2011 Google Inc. All Rights Reserved.,-,,java,-,-,https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+com.fasterxml.jackson.jaxrs:jackson-jaxrs-base,2.9.9,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base
+com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider,2.12.1,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider
+com.fasterxml.jackson.module:jackson-module-jaxb-annotations,2.12.1,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-jaxb-annotations
+com.github.fge:json-patch,1.9,LGPL-3.0-only,Apache-2.0,Copyright (c) 2014, Francis Galiegue (fgalieguegmail.com),-,,java,-,-,https://mvnrepository.com/artifact/com.github.fge/json-patch
+com.sun.xml.bind:jaxb-impl,2.2.4-1,CDDL-1.1,,-,,java,-,-,https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl
+com.sun.xml.messaging.saaj:saaj-impl,1.3.2,CDDL-1.0,Artistic-1.0,,-,,java,-,-,https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl
+commons-dbcp:commons-dbcp,1.2.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
+commons-httpclient:commons-httpclient,2.0.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient
+commons-io,2.5,Apache-2.0,,-,,java,-,-,
+commons-logging:commons-logging,1.1.1,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/commons-logging/commons-logging
+commons-pool:commons-pool,1.5.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/commons-pool/commons-pool
+csi-apachesoap,1.4.6,Apache-2.0,,-,,java,-,-,
+csi-core,1.4.6,Apache-2.0,,-,,java,-,-,
+csi-ejb,1.4.6,Apache-2.0,,-,,java,-,-,
+csi-rmi,1.4.6,Apache-2.0,,-,,java,-,-,
+csi-stadapter,1.4.6,Apache-2.0,,-,,java,-,-,
+ejb,2.1,CDDL,,-,,java,-,-,
+io.swagger:swagger-annotations,1.5.18,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/io.swagger/swagger-annotations
+io.swagger:swagger-jaxrs,1.5.18,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/io.swagger/swagger-jaxrs
+iridev2-pep-intf,2.0.0,Apache-2.0,,-,,java,-,-,
+jaas,1.0,CDDL,,-,,java,-,-,
+jakarta.validation:jakarta.validation-api,2.0.2,Apache-2.0,,-,,java,-,-,
+javax.jws:javax.jws-api,1.1,CDDL-1.1,Copyright (C) 1989, 1991 Free Software Foundation, Inc.51 Franklin Street, Fifth FloorBoston, MA 02110-1335USA,-,,java,-,-,
+javax.mail:mail,--,libpng-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/javax.mail/mail
+javax.xml.bind:activation,1.0.2,CDDL-1.1,,-,,java,-,-,https://mvnrepository.com/artifact/javax.xml.bind/activation
+javax.xml.bind:jaxb-api,--,CNRI-Python-GPL-Compatible,CDDL-1.1,,-,,java,-,-,https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+javax.xml.ws:jaxws-api,2.3.1,CDDL,GPL-2.0,Apache-2.0,Copyright (C) 1989, 1991 Free Software Foundation, Inc.    51 Franklin Street, Fifth Floor    Boston, MA 02110-1335    USA,-,,java,-,-,https://mvnrepository.com/artifact/javax.xml.ws/jaxws-api
+jaxp,1.1,Apache-2.0,,-,,java,-,-,
+jms,1.0.2,CDDL,,-,,java,-,-,
+jndi,1.2.1,CDDL,,-,,java,-,-,
+junit:junit,4.12,EPL-1.0,Copyright 2013 LinkedIn Corp. All rights reserved.,-,,java,-,-,https://mvnrepository.com/artifact/junit/junit
+log4j:log4j,1.2.14,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/log4j/log4j
+org.apache.commons:commons-lang3,3.2.1,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+org.apache.cxf:cxf-core,3.3.10,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-core
+org.apache.cxf:cxf-rt-bindings-soap,3.3.10,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-bindings-soap
+org.apache.cxf:cxf-rt-databinding-jaxb,3.3.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-databinding-jaxb
+org.apache.cxf:cxf-rt-features-logging,3.3.10,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-features-logging
+org.apache.cxf:cxf-rt-frontend-jaxws,3.3.10,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxws
+org.apache.cxf:cxf-rt-frontend-simple,3.3.10,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-simple
+org.apache.cxf:cxf-rt-security,3.3.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-security
+org.apache.cxf:cxf-rt-transports-http,3.3.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-transports-http
+org.apache.cxf:cxf-rt-ws-security,3.3.10,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-ws-security
+org.apache.cxf:cxf-rt-wsdl,3.3.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-wsdl
+org.apache.httpcomponents:httpclient,4.5.13,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+org.apache.httpcomponents:httpcore,4.4.14,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore
+org.apache.neethi:neethi,2.0.4,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.neethi/neethi
+org.apache.santuario:xmlsec,2.1.6,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.santuario/xmlsec
+org.apache.ws.xmlschema:xmlschema-core,2.0.3,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.ws.xmlschema/xmlschema-core
+org.apache.wss4j:wss4j-ws-security-common,2.2.3,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.wss4j/wss4j-ws-security-common
+org.apache.wss4j:wss4j-ws-security-dom,2.2.3,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.apache.wss4j/wss4j-ws-security-dom
+org.codehaus.jettison:jettison,1.4.0,Apache-2.0,Copyright 2006 Envoi Solutions LLC,-,,java,-,-,https://mvnrepository.com/artifact/org.codehaus.jettison/jettison
+org.hamcrest:hamcrest-all,1.3,BSD-2-Clause,,-,,java,-,-,https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all
+org.jboss.logging:jboss-logging,3.4.1.Final,Apache-2.0,Copyright 2020 Red Hat, Inc.,-,,java,-,-,https://mvnrepository.com/artifact/org.jboss.logging/jboss-logging
+org.jboss.resteasy:resteasy-client,3.15.1.Final,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client
+org.jboss.resteasy:resteasy-jackson2-provider,3.15.1.Final,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jackson2-provider
+org.jboss.resteasy:resteasy-jaxrs,3.15.1.Final,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-jaxrs
+org.jboss.resteasy:resteasy-multipart-provider,3.15.1.Final,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-multipart-provider
+org.jboss.resteasy:resteasy-spring,3.0.7.Final,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-spring
+org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec,2.0.1.Final,GPLV2+CE,EPL-2.0,Copyright (C) 1989, 1991 Free Software Foundation, Inc.    51 Franklin Street, Fifth Floor    Boston, MA 02110-1335    USA,-,,java,-,-,
+org.jboss.spec.javax.servlet:jboss-servlet-api_4.0_spec,1.0.0.Final,CDDL-1.1,Copyright (C) <year> <name of author>,-,,java,-,-,
+org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec,2.0.1.Final,EPL-2.0,Copyright (C) 1989, 1991 Free Software Foundation, Inc.    51 Franklin Street, Fifth Floor    Boston, MA 02110-1335    USA,-,,java,-,-,
+org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec,2.0.1.Final,EDL-1.0,,-,,java,-,-,
+org.netbeans.external:slf4j-api,RELEASE113,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/org.netbeans.external/slf4j-api
+org.ow2.asm:asm,7.1,BSD,,-,,java,-,-,https://mvnrepository.com/artifact/org.ow2.asm/asm
+org.reactivestreams:reactive-streams,1.0.2,CC0-1.0,Copyright 2014 Reactive Streams,-,,java,-,-,https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams
+org.springframework:spring-aop,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-aop
+org.springframework:spring-beans,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-beans
+org.springframework:spring-context,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-context
+org.springframework:spring-core,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-core
+org.springframework:spring-expression,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-expression
+org.springframework:spring-instrument,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-instrument
+org.springframework:spring-jdbc,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+org.springframework:spring-test,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-test
+org.springframework:spring-tx,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-tx
+org.springframework:spring-web,4.3.24.RELEASE,Apache-2.0,Copyright 20042008 the original author or authors.,-,,java,-,-,https://mvnrepository.com/artifact/org.springframework/spring-web
+postgresql,9.4,PostgreSQL,,-,,java,-,-,
+servlet,2.4,CDDL+GPL,,-,,java,-,-,
+soap:soap,2.3.1,CDDL,,-,,java,-,-,https://mvnrepository.com/artifact/soap/soap
+util-perf,1.0.0,Apache-2.0,,-,,java,-,-,
+weblogic-client,3.0.0,ORCL.OTN,,-,,java,-,-,
+wsdl4j:wsdl4j,1.6.3,CPL-1.0,,-,,java,-,-,https://mvnrepository.com/artifact/wsdl4j/wsdl4j
+xerces,1.4.4,Apache-2.0,,-,,java,-,-,
+xerces:xercesImpl,2.12.2,Apache-2.0,,-,,java,-,-,https://mvnrepository.com/artifact/xerces/xercesImpl
+xfire:saaj-api,1.3,CDDL-1.0,,-,,java,-,-,https://mvnrepository.com/artifact/xfire/saaj-api

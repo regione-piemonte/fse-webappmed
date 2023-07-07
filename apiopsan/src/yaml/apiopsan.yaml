@@ -1,0 +1,3314 @@
+swagger: '2.0'
+info:
+  description: |-
+    # Avvertenze
+    ---
+
+    # Domande
+    ---
+
+    # Prototipo Interfaccia
+    ---
+     https://xd.adobe.com/view/73950c4a-1071-411f-8c54-5783e4f7c848-26c6/ 
+
+    # Note
+    ---
+
+    ## Version 0.0.29 (13 Dec 2022)
+    * Modifica indirizzo_studio: aggiunta email
+
+    ## Version 0.0.28 (18 Nov 2022)
+    * Aggiunta API IsDocumentoRestituibile (/cittadini/{cit_id}/documenti/{id_documento_ilec}/restituibile)
+
+    ## Versione 0.0.27 (15 Nov 2022)
+    * Rinominato tokenLcce (=> tokenLCCE)
+
+    ## Versione 0.0.26 (14 Nov 2022)
+    * Modifica API GetInfoUtenteLoggato (/login/utente): aggiunto tokenLcce
+    * Modifica query_token: required => optional
+    * Modifica API GetTaccuino (/cittadini/{cit_id}/taccuino): aggiunto regime
+
+    ## Versione 0.0.25 (11 Nov 2022)
+    * Aggiunta API IsDocumentoSmediabile (/cittadini/{cit_id}/documenti/{id_documento_ilec}/smediazione)
+
+    ## Versione 0.0.24 (10 Nov 2022)
+    * Modifica utente (aggiunti cf_paziente e tipo_documento)
+
+    ## Versione 0.0.23 (03 Nov 2022)
+    * Modifica medico_mmg: aggiunta email
+
+    ## Versione 0.0.22 (28 Ott 2022)
+    * Modifica scarico_studi: accession_number (string => array di string)
+
+    ## Versione 0.0.21 (27 Ott 2022)
+    * Modifica API Taccuino (aggiunto 'regime' in input / aggiunto numero elementi restituiti in output
+
+    ## Versione 0.0.20 (18 Ott 2022)
+    * Modifica output API GetDocumento (/cittadini/{cit_id}/documento/_search)
+
+    ## Versione 0.0.19 (14 Ott 2022)
+    * Modifica query_data_da, query_data_a (date => string)
+    * Modifica metadati_documento: aggiunto tipo_contributo
+
+    ## Versione 0.0.18 (13 Ott 2022)
+    * Rename query_da => query_data_da, query_a => query_data_a e modifica tipo (string => date)
+
+    ## Versione 0.0.17 (12 Ott 2022)
+    * Modifica taccuino_id (string => integer), documento (aggiunto 'nome_file')
+
+    ## Versione 0.0.16 (11 Ott 2022)
+    * Modifica esito_ultimo_documento, evento, dieta, dolore
+
+    ## Versione 0.0.15 (07 Ott 2022)
+    * Modifica farmaco: data_assuzione => format: date
+    * Modifica sintomo: id int 32 => in64
+
+    ## Versione 0.0.14 (06 Ott 2022)
+    * Modifica esito_ultimo_documento: href (string) => documento (byte)
+
+    ## Versione 0.0.13 (05 Ott 2022)
+    * Modifica API SetAuditOpsan (/audit):
+      modificato response content type
+
+    ## Versione 0.0.12 (04 Ott 2022)
+    * Modificato output API VerificaStatoPacchetto (/referti/verifica-stato-pacchetto/)
+
+    ## Versione 0.0.11 (30 Set 2022)
+    * Aggiunta API GetDocumentoPersonale (/cittadini/{cit_id}/documenti/{id_documento_ilec}/personale)
+    * Modifica API GetTuttiDoc (/cittadini/{cit_id}/documenti/_search):
+      modificato ouput
+    * Modifica API GetDocumento (/cittadini/{cit_id}/documento/_search):
+      GET => POST: modificata url e aggiunto payload
+
+    ## Versione 0.0.10 (27 Set 2022)
+    * Aggiunta API GetUltimoDocumento (/cittadini/{cit_id}/documenti/ultimo)
+    * Modifica utente_richiedente
+
+    ## Versione 0.0.9 (26 Set 2022)
+    * Aggiunta API GetDettaglioPrestazioniDoc (/cittadini/{cit_id}/documenti/{id_documento_ilec}/prestazioni)
+    * Modifica path API GetInfoUtenteLoggato (/login/utente)
+
+    ## Versione 0.0.8 (23 Set 2022)
+    * Modifica output API GetInfoUtenteLoggato (/me)
+
+    ## Versione 0.0.7 (22 Set 2022)
+    * Modifica payload API RecuperaDocumento (/cittadini/{cit_id}/documenti/fo/documento)
+    * Modifica sintesi_documento (aggiunto recupero_pregresso)
+    * Aggiornamento API PrenotaPacchettoImmagini (/referti/prenotazione-pacchetto-immagini/):
+      modificato scarico_studi
+
+    ## Versione 0.0.6 (21 Set 2022)
+    * Modifica output API GetInfoUtenteLoggato (/me): eliminati profili e strutture
+    * Modifica API GetCollocazioni (/login/collocazioni)
+      aggiunto header param header_x_codice_verticale
+    * Modifica API GetRuoli (/login/ruoli):
+      aggiunto header param header_x_codice_verticale
+    * Modifica API GetDettaglioDoc (/cittadini/{cit_id}/documenti/{id_documento_ilec}):
+      aggiunto query param tipo_medico
+
+    ## Versione 0.0.5 (20 Set 2022)
+    * Modifica output API InfoScreening (/cittadini/{cit_id}/screening)
+
+    ## Versione 0.0.4 (19 Set 2022)
+    * Aggiunta API prenotazionePacchettoImmagini (/referti/penotazione-pacchetto-immagini)
+    * Aggiunta API verificaStatoPacchetto (/referti/verifica-stato-pacchetto)
+
+    ## Versione 0.0.3 (15 Set 2022)
+    * Aggiunta API getElencoTipoDocumentoCategoria (/cataloghi/elenco-tipodocumento-categoria)
+    * Aggiunta API scansionaQRCode (/referti/qrcode)
+    * Aggiunta API getCollocazioni (/login/collocazioni)
+    * Aggiunta API getRuoli (/login/ruoli)
+
+    ## Versione 0.0.2 (14 Set 2022)
+    * Aggiunta API GetInfoUtenteLoggato (/me)
+
+    ## Versione 0.0.1 (01 Jul 2022)
+    * Prima implementazione
+  version: 0.0.27
+  title: APIOPSAN - Servizi FSE per nuova applicazione web del Medico - [Medico - Documenti - Episodi]
+  license:
+    name: EUPL 1.2
+    url: https://www.eupl.eu/1.2/it/
+host: localhost:9000
+basePath: /
+tags:
+  - name: audit-api
+    description: Audit Api
+  - name: cataloghi-api
+    description: Cataloghi Api
+  - name: documenti-api
+    description: Documenti Api
+  - name: episodi-api
+    description: Episodi Api
+  - name: info-cittadini-api
+    description: Info Cittadini Api
+  - name: operatore-sanitario-api
+    description: Operatore Sanitario Api
+paths:
+  /login/utente:
+    get:
+      tags:
+        - configuratore-PUA
+      summary: Informazioni utente loggato
+      operationId: getInfoUtenteLoggato
+      description:
+        Restituisce informazioni relative all'utente loggato
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/query_token'
+        - $ref: '#/parameters/query_token_lcce'
+      responses:
+        '200':
+          description:
+            La lista dei profili
+          headers:
+            X-Request-ID:
+              type: string
+              description: Ritorno del parametro ricevuto nella request.
+          schema:
+            $ref: '#/definitions/utente'
+        '400':
+          $ref: '#/responses/bad_request'
+        '403':
+          $ref: '#/responses/forbidden'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /login/collocazioni:
+    get:
+      summary: ''
+      operationId: getCollocazioni
+      tags:
+        - configuratore-PUA
+      description: Restituisce le collocazioni associate all’utente collegato e al ruolo specificato nei parametri di input
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - name: codice_ruolo
+          in: query
+          type: string
+          required: true
+          description: codice ruolo dell'utente
+          x-example: MMG
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          headers:
+            X-Request-ID:
+              type: string
+              description: Ritorno del parametro ricevuto nella request.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/collocazione'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /login/ruoli:
+    get:
+      summary: ''
+      operationId: getRuoli
+      tags:
+        - configuratore-PUA
+      produces:
+        - application/json
+      description: Restituisce la lista dei ruoli dell'utente collegato  
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          headers:
+            X-Request-ID:
+              type: string
+              description: Ritorno del parametro ricevuto nella request.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ruolo'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /audit:
+    put:
+      tags:
+        - audit-api
+      summary: SetAuditOpSan (DMA-MED-SER-02-V01-SetAuditOpSan.doc)
+      operationId: setAuditOpSan
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - in: body
+          name: payload_set_audit
+          description: payloadSetAudit
+          required: true
+          schema:
+            $ref: '#/definitions/payload_set_audit'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/_search:
+    get:
+      tags:
+        - info-cittadini-api
+      summary: 'RicercaPaziente (DMA-MED-SER-03-V01 bozza01-GET RicercaPaziente.doc) Restituisce le informazioni relative al paziente'
+      operationId: ricercaPaziente
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: query
+          description: cit_id
+          type: string
+        - name: nome
+          in: query
+          description: nome
+          type: string
+        - name: cognome
+          in: query
+          description: cognome
+          type: string
+        - name: data_nascita
+          in: query
+          description: data_nascita
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/paziente'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cataloghi/tipodocumento:
+    get:
+      tags:
+        - cataloghi-api
+      summary: Il servizio ritorna l'elenco dei tipi documento leggendo dalla tabella dmacc_d_catalogo_tipo_documento
+      operationId: getTipoDocumento
+      produces:
+        - application/json
+      parameters:
+        - name: Shib-Identita-CodiceFiscale
+          in: header
+          description: Contiene il codice fiscale dell'utente loggato ottenuto tramite shibboleth
+          required: true
+          type: string
+        - name: X-Request-Id
+          in: header
+          description: Contiene un id univoco (`uuid v4`) della chiamata HTTP che viene generato dal front-end, viene propagato agli strati successivi e viene restituito al front-end assieme alla response, permettendo cos? di tracciare l'intero ciclo di vita della richiesta
+          required: true
+          type: string
+        - name: X-Forwarded-For
+          in: header
+          description: 'Contiene l''elenco degli ip che hanno gestito la richiesta. Utile per i log e l''audit. Il formato della stringa ? ``` <ip-front-end>, <ip-primo-server>, ..., <ip-ultimo-server> ``` Es. `10.10.10.10, 10.38.45.68, 10.128.69.244` '
+          required: true
+          type: string
+        - name: X-Codice-Servizio
+          in: header
+          description: Contiene una stringa identificativa del servizio chiamante (es.COD)
+          required: true
+          type: string
+        - name: X-Codice-Verticale
+          in: header
+          description: Contiene una stringa identificativa del verticale chiamante (es.COD)
+          required: true
+          type: string
+        - name: Ruolo
+          in: header
+          description: Ruolo
+          required: true
+          type: string
+        - name: Regime
+          in: header
+          description: Regime
+          required: true
+          type: string
+        - name: Collocazione
+          in: header
+          description: Collocazione
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Operazione esecuita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/tipo_documento'
+        '400':
+          description: La richiesta fatta dal client ? errata. Ad esempio non sono stati passati tutti i campi obbligatori, uno dei campi ? di un tipo non valido, formattazione dei filtri errata ecc.
+          schema:
+            $ref: '#/definitions/errore'
+        '401':
+          description: Unauthorized
+        '403':
+          description: L'utente non ha i permessi necessari per visualizzare queste risorse.
+          schema:
+            $ref: '#/definitions/errore'
+        '404':
+          description: La risorsa non ? stata trovata.
+          schema:
+            $ref: '#/definitions/errore'
+        '500':
+          description: Si ? verificato un'errore interno del server.
+          schema:
+            $ref: '#/definitions/errore'
+  /cataloghi/elenco-tipodocumento-categoria:
+    get:
+      tags:
+        - cataloghi-api
+      summary: Il servizio ritorna l'elenco delle associazioni tra tipo documento e categoria, leggendola da dmacc_r_catalogo_tipo_documento_categoria
+      operationId: getElencoTipoDocumentoCategoria
+      produces:
+        - application/json
+      parameters:
+        - name: Shib-Identita-CodiceFiscale
+          in: header
+          description: Contiene il codice fiscale dell'utente loggato ottenuto tramite shibboleth
+          required: true
+          type: string
+        - name: X-Request-Id
+          in: header
+          description: Contiene un id univoco (`uuid v4`) della chiamata HTTP che viene generato dal front-end, viene propagato agli strati successivi e viene restituito al front-end assieme alla response, permettendo cos? di tracciare l'intero ciclo di vita della richiesta
+          required: true
+          type: string
+        - name: X-Forwarded-For
+          in: header
+          description: 'Contiene l''elenco degli ip che hanno gestito la richiesta. Utile per i log e l''audit. Il formato della stringa ? ``` <ip-front-end>, <ip-primo-server>, ..., <ip-ultimo-server> ``` Es. `10.10.10.10, 10.38.45.68, 10.128.69.244` '
+          required: true
+          type: string
+        - name: X-Codice-Servizio
+          in: header
+          description: Contiene una stringa identificativa del servizio chiamante (es.COD)
+          required: true
+          type: string
+        - name: X-Codice-Verticale
+          in: header
+          description: Contiene una stringa identificativa del verticale chiamante (es.COD)
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/tipo_documento_categoria'
+        '400':
+          description: La richiesta fatta dal client ? errata. Ad esempio non sono stati passati tutti i campi obbligatori, uno dei campi ? di un tipo non valido, formattazione dei filtri errata ecc.
+          schema:
+            $ref: '#/definitions/errore'
+        '401':
+          description: Unauthorized
+        '403':
+          description: L'utente non ha i permessi necessari per visualizzare queste risorse.
+          schema:
+            $ref: '#/definitions/errore'
+        '404':
+          description: La risorsa non ? stata trovata.
+          schema:
+            $ref: '#/definitions/errore'
+        '500':
+          description: Si ? verificato un'errore interno del server.
+          schema:
+            $ref: '#/definitions/errore'
+  /cittadini/{cit_id}/consenso:
+    get:
+      tags:
+        - info-cittadini-api
+      summary: 'StatoConsenso (DMA-MED-SER-04-V03 -GET cittadini-cf-consenso (Stato Consensi).doc) Restituisce i  consensi forniti dal cittadino sul Fascicolo Sanitario'
+      operationId: statoConsenso
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/stato_consenso'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/comunicazione-consensi:
+    post:
+      tags:
+        - info-cittadini-api
+      summary: 'ComunicazioneConsenso (rif. DMA-MED-SER-06-V01 bozza01-cittadini-cf-consenso(ComunicazioneConsensi).doc) Permette la comunicazione dei consensi del FSE a INI'
+      operationId: comunicazioneConsenso
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - in: body
+          name: payload_comunicazione_consensi
+          description: payloadComunicazioneConsensi
+          required: true
+          schema:
+            $ref: '#/definitions/payload_comunicazione_consensi'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/_search:
+    post:
+      tags:
+        - documenti-api
+      summary: GetTuttiDoc (DMA-MED-SER-17-V04-GetTuttiDoc.doc) Restituisce i metadati dei documenti (purché non oscurati)
+      operationId: getTuttiDoc
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - in: body
+          name: payload_search_tutti_doc
+          description: payloadSearchTuttiDoc
+          required: true
+          schema:
+            $ref: '#/definitions/payload_search_tutti_doc'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/sintesi_documento'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}:
+    get:
+      tags:
+        - documenti-api
+      summary: 'GetDettaglioDoc (DMA-MED-SER-12-V02-GetDettaglioDoc.doc) Restituisce i metadati di un documento'
+      operationId: getDettaglioDoc
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+        - name: categoria
+          in: query
+          description: categoria
+          type: string
+        - name: tipo_medico
+          in: query
+          description: tipoMedico
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/sintesi_documento'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}/correlati:
+    get:
+      tags:
+        - documenti-api
+      summary: GetDocumentiCorrelati (DMA-MED-SER-16-V01 -GetDocumentiCorrelati.doc) Restituisce i metadati dei documenti correlati al documento passato in input
+      operationId: getDocumentiCorrelati
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+        - name: tipo_correlazione_documento
+          in: query
+          description: tipoCorrelazioneDocumento
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/sintesi_documento'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documento/_search:
+    post:
+      tags:
+        - documenti-api
+      summary: 'GetDocumento (DMA-MED-SER-18-V01-beta2-CCGetDocumentoPerOP.doc) Restituisce il  documento'
+      operationId: getDocumento
+      produces:
+        - application/json
+        - application/pdf
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - in: body
+          name: payload_get_documento
+          description: payloadGetDocumento
+          required: true
+          schema:
+            $ref: '#/definitions/payload_get_documento'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/documento'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}/restituibile:
+    get:
+      tags:
+        - documenti-api
+      summary: IsDocumentoRestituibile (DMA-MED-SER-29-V01-GetRestituibilitaDocumento.doc) Determina se il documento richiesto in input può essere restituito in base a condizioni quali stato consenso, regime, oscuramento, refertante, applicativo chiamante, pagamento ticket
+      operationId: IsDocumentoRestituibile
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_is_documento_restituibile'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}/personale:
+    get:
+      tags:
+        - documenti-api
+      summary: 'GetDocumentoPersonale (DMA-MED-SER-20-V01 CCGetDocumentoPersonalePerOP-verif.doc) Restituisce il  documento personale'
+      operationId: getDocumentoPersonale
+      produces:
+        - application/json
+        - application/pdf
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/documento'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}/mediazione:
+    put:
+      tags:
+        - documenti-api
+      summary: MediazioneDocumento (DMA-MED-SER-14-V01-PUT mediazione.doc) Permette di mediare un documento oscurato al cittadino rendendolo visibile al cittadino stesso
+      operationId: mediazioneDocumento
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}/smediazione:
+    get:
+      tags:
+        - documenti-api
+      summary: IsDocumentoSmediabile (DMA-MED-SER-30-V01-GetSmediabilitàDocumento.doc) Specifica se il documento passato in input può essere smediato (operazione effettuata dal servizio PutMediazione)
+      operationId: isDocumentoSmediabile
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_is_documento_mediabile'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/fo/documento:
+    post:
+      tags:
+        - documenti-api
+      summary: RecuperaDocumento (DMA-MED-SER-08-V01 bozza01-PO - RecuperaDocumento.doc) Restituisce i documenti non presenti in FSE in quanto appartenenti a soggetti con regione di assistenza diversa da regione Piemonte
+      operationId: recuperaDocumento
+      produces:
+        - application/json
+        - application/pdf
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - in: body
+          name: payload_recupera_documento
+          description: payloadRecuperaDocumento
+          required: true
+          schema:
+            $ref: '#/definitions/payload_recupera_documento'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/documento_fr'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/{id_documento_ilec}/prestazioni:
+    get:
+      tags:
+        - documenti-api
+      summary: 'GetDettaglioPrestazioniDoc (DMA-MED-SER-13-V01 - CL GetDettaglioDoumento.doc) Restituisce le prestazioni di un documento'
+      operationId: getDettaglioPrestazioniDoc
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_documento_ilec
+          in: path
+          description: idDocumentoIlec
+          required: true
+          type: integer
+          format: int64
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/prestazione'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/episodi/_search:
+    post:
+      tags:
+        - episodi-api
+      summary: GetSoloEpisodi (DMA-MED-SER-10-V01-POST-GetSoloEpisodi.doc) Restituisce i metadati degli episodi che contengono almeno un documento corrispondente ai criteri di ricerca in input
+      operationId: getSoloEpisodi
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - in: body
+          name: payload_search_episodi
+          description: payloadSearchEpisodi
+          schema:
+            $ref: '#/definitions/payload_search_episodi'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+              $ref: '#/definitions/esito_get_solo_episodi'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/documenti/ultimo:
+    get:
+      tags:
+        - documenti-api
+      summary: 'GetUltimoDocumento (DMA-MED-SER-26-V01-GetUltimoDocumento.doc) Restituisce l''ultimo documento'
+      operationId: getUltimoDocumento
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: tipo_documento
+          in: query
+          description: tipoDocumento
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_ultimo_documento'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/episodi/{id_episodio}/documenti:
+    get:
+      tags:
+        - episodi-api
+      summary: GetDocumentiEpisodio (DMA-MED-SER-11-V01 -GetDocumentiEpisodi.doc) Restituisce i metadati dei documenti (non oscurati) afferenti all'episodio passato in input
+      operationId: getDocumentiEpisodio
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_episodio
+          in: path
+          description: idEpisodio
+          required: true
+          type: integer
+          format: int32
+        - name: codice_componente_locale
+          in: query
+          description: codiceComponenteLocale
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/sintesi_documento'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/esenzioni:
+    get:
+      tags:
+        - info-cittadini-api
+      summary: GetEsenzioni (DMA-MED-SER-27-V01 bozza01-GetEsenzioniNO.doc) Restituisce le esenzioni relative al paziente
+      operationId: getEsenzioni
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/elenco_esenzioni'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/info-mmg:
+    get:
+      tags:
+        - info-cittadini-api
+      summary: GetMMGPaziente (DMA-MED-SER-09-V03-GetMMGPaziente.doc) Restituisce le informazioni relative a orari e luoghi dell'ambulatorio del medico MMG passato in input
+      operationId: getMMGPaziente
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: id_irec
+          in: query
+          description: idIrec
+          type: string
+        - name: id_aura
+          in: query
+          description: idAura
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/info_mmg_paziente'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/informativa:
+    get:
+      tags:
+        - info-cittadini-api
+      summary: GetInformativa (DMA-MED-SER-05-V01-GET-GetInformativa.doc) Restituisce il pdf dell'informativa richiesta
+      operationId: getInformativa
+      produces:
+        - application/json
+        - application/pdf
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: identificativo_struttura
+          in: query
+          description: identificativoStruttura
+          type: string
+        - name: identificativo_organizzazione
+          in: query
+          description: identificativoOrganizzazione
+          type: string
+        - name: id_informativa
+          in: query
+          description: idInformativa
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/file'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /operatore-sanitario/miei-referti/_search:
+    post:
+      tags:
+        - operatore-sanitario-api
+      summary: GetMieiReferti (DMA-MED-SER-15-V02-Get_Miei_Referti.doc) Restituisce i metadati dei documenti di cui il medico ? redattore e/o validatore indipendentemente dal consenso alla consultazione fornito dal cittadino e dal valore di oscuramento del documento
+      operationId: getMieiReferti
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - in: body
+          name: payload_search_miei_referti
+          description: payloadSearchMieiReferti
+          required: true
+          schema:
+            $ref: '#/definitions/payload_search_miei_referti'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/sintesi_documento'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /operatore-sanitario/regimi:
+    get:
+      tags:
+        - operatore-sanitario-api
+      summary: GetRegimi (DMA-MED-SER-01-V03-GET Regimi.doc) Restituisce i regimi associati al ruolo dell?operatore sanitario
+      operationId: getRegimi
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_collocazione'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/codice'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/screening:
+    get:
+      tags:
+        - info-cittadini-api
+      summary: InfoScreening (DMA-MED-SER-28-V01 bozza01-GetScreening.doc) Restituisce i metadati degli esami di screeening effettuati nell'ambito dei progetti regionali di Screening
+      operationId: infoScreening
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_info_screening'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuino:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetTaccuino (DMA-MED-SER-01-V01 -GET DettaglioTaccuinoMED.doc) Restituisce il taccuino del paziente compresi nota generale, preferenze  e valore consenso (visibilità) del taccuino
+      operationId: getTaccuino
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/taccuino'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/rilevazioni/_search:
+    post:
+      tags:
+        - taccuino-api
+      summary: GetRilevazioni (DMA-MED-SER-02-V01 -GET DettaglioRilevazioniMED.doc) Restituisce le rilevazioni presenti nel taccuino del paziente
+      operationId: getRilevazioni
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+        - in: body
+          name: payload_get_rilevazioni
+          description: PayloadGetRilevazioni
+          required: true
+          schema:
+            $ref: '#/definitions/payload_get_rilevazioni'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_rilevazioni'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/sintomi:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetSintomi (DMA-MED-SER-03-V01 -GET ListaSintomiMED.doc) Restituisce l'elenco dei sintomi presenti nel taccuino del paziente
+      operationId: getSintomi
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_sintomi'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/dolori:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetDolori (DMA-MED-SER-04-V01 -GET ListaDoloriMED.doc) Restituisce l'elenco dei dolori presenti nel taccuino del paziente
+      operationId: getDolori
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_dolori'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/eventi:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetEventi (DMA-MED-SER-05-V01 -GET ListaEventiMED.doc) Restituisce l'elenco degli eventi presenti nel taccuino del paziente
+      operationId: getEventi
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_eventi'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/farmaci:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetFarmaci (DMA-MED-SER-06-V01 -GET ListaFarmaciMED.doc) Restituisce l'elenco degli farmaci presenti nel taccuino del paziente
+      operationId: getFarmaci
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_farmaci'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/diete:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetDiete (DMA-MED-SER-07-V01 -GET ListaDieteMED.doc) Restituisce l'elenco delle diete presenti nel taccuino del paziente
+      operationId: getDiete
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_diete'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /cittadini/{cit_id}/taccuini/{taccuino_id}/contatti-strutture:
+    get:
+      tags:
+        - taccuino-api
+      summary: GetContattiStrutture (DMA-MED-SER-08-V01 -GET ListaContattiStruttureMED.doc) Restituisce l'elenco dei contatti e delle strutture presenti nel taccuino del paziente
+      operationId: getContattiStrutture
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: cit_id
+          in: path
+          description: cit_id
+          required: true
+          type: string
+        - name: taccuino_id
+          in: path
+          description: taccuino_id
+          required: true
+          type: integer
+          format: int64
+        - $ref: '#/parameters/query_limit'
+        - $ref: '#/parameters/query_offset'
+        - $ref: '#/parameters/query_ordinamento'
+        - $ref: '#/parameters/query_data_da'
+        - $ref: '#/parameters/query_data_a'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/esito_get_contatti_strutture'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /referti/qrcode:
+    get:
+      tags:
+        - referti
+      summary: 'ScansionaQRCode (DMA-MED-SER-40-V03 -ScansionaQRCode.doc) Il servizio consente di restituire un documento partendo dalla scansione di un QRCode'
+      operationId: scansionaQRCode
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: qrcode
+          in: query
+          description: qrcode
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/file'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /referti/prenotazione-pacchetto-immagini/:
+    post:
+      tags:
+        - referti
+      summary: 'PrenotaPacchettoImmagini (DMA-MED-SER-34-V01- API Medico - PrenotaPacchettoImmagini.doc) Il servizio richiede la prenotazione di un pacchetto immagini'
+      operationId: prenotaPacchettoImmagini
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - in: body
+          name: scarico-studi
+          description: scaricoStudi
+          required: true
+          schema:
+            $ref: '#/definitions/scarico_studi'
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+  /referti/verifica-stato-pacchetto/:
+    get:
+      tags:
+        - referti
+      summary: 'VerificaStatoPacchetto (DMA-MED-SER-35-V01- API Medico - Verifica stato pacchetto.doc) Il servizio verifica lo stato di un pacchetto immagini'
+      operationId: verificaStatoPacchetto
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/header_shib_identita_codice_fiscale'
+        - $ref: '#/parameters/header_x_request_id'
+        - $ref: '#/parameters/header_x_forwarded_for'
+        - $ref: '#/parameters/header_x_codice_servizio'
+        - $ref: '#/parameters/header_x_codice_verticale'
+        - $ref: '#/parameters/header_ruolo'
+        - $ref: '#/parameters/header_regime'
+        - $ref: '#/parameters/header_collocazione'
+        - name: codice_fiscale
+          in: query
+          description: codice_fiscale
+          type: string
+        - name: id_documento_ilec
+          in: query
+          description: id_documento_ilec
+          type: string
+        - name: cod_cl
+          in: query
+          description: cod_cl
+          type: string
+        - name: cod_documento_dipartimentale
+          in: query
+          description: cod_documento_dipartimentale
+          type: string
+        - name: archivio_documento_ilec
+          in: query
+          description: archivio_documento_ilec
+          type: string
+      responses:
+        '200':
+          description: Operazione eseguita correttamente
+          schema:
+            $ref: '#/definitions/verifica_stato_pacchetto'
+        '400':
+          $ref: '#/responses/bad_request'
+        '401':
+          description: Unauthorized
+        '403':
+          $ref: '#/responses/forbidden'
+        '404':
+          $ref: '#/responses/not_found'
+        '500':
+          $ref: '#/responses/internal_server_error'
+responses:
+  bad_request:
+    description: La richiesta fatta dal client ? errata. Ad esempio non sono stati passati tutti i campi obbligatori, uno dei campi ? di un tipo non valido, formattazione dei filtri errata ecc.
+    schema:
+      $ref: '#/definitions/errore'
+  forbidden:
+    description:
+      L'utente non ha i permessi necessari per visualizzare queste risorse.
+    schema:
+      $ref: '#/definitions/errore'
+  not_found:
+    description:
+      La risorsa cercata non ? stata trovata.
+    schema:
+      $ref: '#/definitions/errore'
+  internal_server_error:
+    description:
+      Si ? verificato un'errore interno del server.
+    schema:
+      $ref: '#/definitions/errore'
+parameters:
+  header_shib_identita_codice_fiscale:
+    in: header
+    name: Shib-Identita-CodiceFiscale
+    description: Contiene il codice fiscale dell'utente loggato ottenuto tramite shibboleth
+    type: string
+    required: true
+  header_x_request_id:
+    in: header
+    name: X-Request-Id
+    description: >-
+      Contiene un id univoco (`uuid v4`) della chiamata HTTP che viene generato
+      dal front-end, viene propagato agli strati successivi e viene restituito
+      al front-end assieme alla response, permettendo cos? di tracciare l'intero
+      ciclo di vita della richiesta
+    type: string
+    required: true
+  header_x_forwarded_for:
+    in: header
+    name: X-Forwarded-For
+    description: |
+      Contiene l'elenco degli ip che hanno gestito la richiesta.
+      Utile per i log e l'audit.
+      Il formato della stringa ?
+      ```
+      <ip-front-end>, <ip-primo-server>, ..., <ip-ultimo-server>
+      ```
+      Es. `10.10.10.10, 10.38.45.68, 10.128.69.244`
+    type: string
+    required: true
+  header_x_codice_servizio:
+    in: header
+    name: X-Codice-Servizio
+    description: Contiene una stringa identificativa del servizio chiamante (es. COD)
+    type: string
+    required: true
+  header_x_codice_verticale:
+    in: header
+    name: X-Codice-Verticale
+    description: Contiene una stringa identificativa del verticale chiamante (es. COD)
+    type: string
+    required: true
+  header_ruolo:
+    in: header
+    name: Ruolo
+    type: string
+    required: true
+  header_regime:
+    in: header
+    name: Regime
+    type: string
+    required: true
+  header_collocazione:
+    in: header
+    name: Collocazione
+    type: string
+    required: true
+  query_limit:
+    in: query
+    name: limit
+    description: Il numero di elementi da restituire
+    type: integer
+    format: int32
+  query_offset:
+    in: query
+    name: offset
+    description: L'elemento di partenza della paginazione
+    type: integer
+    format: int32
+  query_ordinamento:
+    in: query
+    name: ordinamento
+    description: ASC per l'ordinamento dal pi? piccolo al pi? grande, DES per l'ordinamento dal pi? grande al pi? piccolo
+    type: string
+  query_data_da:
+    in: query
+    name: data_da
+    description: Permette di filtrare per un range di date. E' da intendere come >=
+    type: string
+  query_data_a:
+    in: query
+    name: data_a
+    description: Permette di filtrare per un range di date. E' da intendere come <=
+    type: string
+  query_token:
+    in: query
+    name: 'token'
+    type: string
+    description:
+      Il codice del profilo
+  query_token_lcce:
+    in: query
+    name: 'tokenLCCE'
+    type: string
+    description:
+      Il codice del profilo in caso di chiamata di contesto
+definitions:
+  azienda:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+      descrizione_struttura:
+        type: string
+      descrizione_unita_operativa:
+        type: string
+      matricola_up_dipartimentale:
+        type: string
+    title: Azienda
+  categoria_tipologia:
+    type: object
+    properties:
+      categoria:
+        type: string
+      tipologia:
+        type: string
+    title: CategoriaTipologia
+  codice:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: Codice
+  tipo_documento:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: TipoDocumento
+  codice_ext:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+      descrizione_estesa:
+        type: string
+    title: CodiceExt
+  contatto-struttura:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      denominazione:
+        type: string
+      data_contatto_inizio:
+        type: string
+        format: date
+      data_contatto_fine:
+        type: string
+        format: date
+      motivazione:
+        type: string
+      medicina_non_conv_tipo_contatto:
+        type: string
+      tipologia_contatto:
+        $ref: '#/definitions/codice'
+      tipologia_struttura:
+        $ref: '#/definitions/codice'
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+    title: ContattoStruttura
+  dieta:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      data:
+        type: string
+        format: date
+      colazione_descrizione:
+        type: string
+      colazione_calorie:
+        type: integer
+        format: int32
+      pranzo_descrizione:
+        type: string
+      pranzo_calorie:
+        type: integer
+        format: int32
+      cena_descrizione:
+        type: string
+      cena_calorie:
+        type: integer
+        format: int32
+      spuntini_descrizione:
+        type: string
+      spuntini_calorie:
+        type: integer
+        format: int32
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+    title: Dieta
+  documento_fr:
+    type: object
+    properties:
+      documento:
+        $ref: '#/definitions/file'
+      tipo_mime:
+        type: string
+      identificativo_org_doc:
+        type: string
+      identificativo_repository:
+        type: string
+      identificativo_documento:
+        type: string
+    title: DocumentoFuoriRegione
+  episodio:
+    type: object
+    properties:
+      id_episodio:
+        type: integer
+        format: int64
+      codice_tipo_episodio:
+        type: string
+      descrizione_tipo_episodio:
+        type: string
+      cit_id:
+        type: string
+      codice_cl:
+        type: string
+      data_inizio:
+        type: string
+        format: date
+      data_fine:
+        type: string
+        format: date
+      azienda_accettazione:
+        type: string
+      descrizione_azienda_accettazione:
+        type: string
+      matricola_accettazione:
+        type: string
+      struttura_accettazione:
+        type: string
+      unita_operativa_accettazione:
+        type: string
+      azienda_dimissione:
+        type: string
+      descrizione_azienda_dimissione:
+        type: string
+      matricola_dimissione:
+        type: string
+      struttura_dimissione:
+        type: string
+      unita_operativa_dimissione:
+        type: string
+    title: Episodio
+  dolore:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      descrizione:
+        type: string
+      area_interessata:
+        type: string
+      intensita_valore:
+        type: integer
+        format: int32
+      data_inizio:
+        type: string
+        format: date
+      data_fine:
+        type: string
+        format: date
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+    title: Dolore
+  errore:
+    type: object
+    properties:
+      code:
+        type: string
+      detail:
+        type: array
+        items:
+          $ref: '#/definitions/errore_dettaglio'
+      links:
+        type: array
+        items:
+          type: string
+      status:
+        type: integer
+        format: int32
+      title:
+        type: string
+    title: Errore
+  errore_dettaglio:
+    type: object
+    properties:
+      chiave:
+        type: string
+      valore:
+        type: string
+    title: ErroreDettaglio
+  esame_screening:
+    type: object
+    properties:
+      data:
+        type: string
+        format: date
+      tipo:
+        $ref: '#/definitions/codice'
+      esito:
+        type: string
+      azienda_sanitaria:
+        $ref: '#/definitions/codice'
+      unita_operativa:
+        $ref: '#/definitions/codice'
+      prestazioni:
+        type: array
+        items:
+          $ref: '#/definitions/codice'
+      giudizi_diagnostici:
+        type: array
+        items:
+          $ref: '#/definitions/giudizio_diagnostico'
+      indicazione_finale:
+        $ref: '#/definitions/indicazione_finale'
+      intervento_erogato:
+        $ref: '#/definitions/intervento_erogato'
+  esito_get_solo_episodi:
+    type: object
+    properties:
+      numero_episodi:
+        type: integer
+        format: int32
+      elenco_episodi:
+        type: array
+        items:
+          $ref: '#/definitions/episodio'
+  evento:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      descrizione:
+        type: string
+      data:
+        type: string
+        format: date
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+    title: Evento
+  file:
+    type: string
+    format: binary
+    title: File
+  filtro_date:
+    type: object
+    properties:
+      data_fine:
+        type: string
+        format: date
+      data_inizio:
+        type: string
+        format: date
+    title: FiltroDate
+  esito_info_screening:
+    properties:
+      paziente:
+        $ref: '#/definitions/paziente'
+      info_sistemi_screening:
+          type: array
+          items:
+            $ref: '#/definitions/screening'
+  giorni_apertura:
+    type: object
+    properties:
+      giorno:
+        type: string
+      orario_fine:
+        type: string
+      orario_inizio:
+        type: string
+    title: GiorniApertura
+  giudizio_diagnostico:
+    type: object
+    properties:
+      giudizio:
+        $ref: '#/definitions/codice'
+      prestazioni:
+        type: array
+        items:
+          $ref: '#/definitions/codice'
+      medici:
+        type: array
+        items:
+          $ref: '#/definitions/medico_tipo_singolo'
+  informativa:
+    type: object
+    properties:
+      id: 
+        type: string
+      file:
+        $ref: '#/definitions/file'
+  importo:
+    type: object
+    properties:
+      ticket_da_pagare:
+        type: integer
+        format: int32
+      ticket_pagato:
+        type: integer
+        format: int32
+    title: Importo
+  indicazione_finale:
+    type: object
+    properties:
+      giudizione:
+        $ref: '#/definitions/codice'
+      medici:
+        type: array
+        items:
+          $ref: '#/definitions/medico'
+    title: IndicazioneFinale
+  indirizzo_studio:
+    type: object
+    properties:
+      cap:
+        type: string
+      desc_comune:
+        type: string
+      indirizzo:
+        type: string
+      tel_primario:
+        type: string
+      email:
+        type: string
+    title: IndirizzoStudio
+  info_mmg_paziente:
+    type: object
+    properties:
+      ha_medico:
+        type: string
+      medico:
+        $ref: '#/definitions/medico_mmg'
+      studi:
+        type: array
+        items:
+          $ref: '#/definitions/studi'
+    title: InfoMMGPaziente
+  intervento_erogato:
+    type: object
+    properties:
+      data:
+        type: string
+        format: date
+      trattamenti:
+        type: array
+        items:
+          $ref: '#/definitions/codice'
+      struttura_sanitaria:
+        $ref: '#/definitions/codice'
+      esito:
+        type: string
+    title: InterventoErogato
+  farmaco:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      descrizione:
+        type: string
+      quantita:
+        type: string
+      data_assunzione:
+        type: string
+        format: date
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+  medico:
+    type: object
+    properties:
+      cognome:
+        type: string
+      nome:
+        type: string
+      codice_fiscale:
+        type: string
+      tipo_medico:
+        type: string
+    title: Medico
+  medico_mmg:
+    type: object
+    properties:
+      codice_fiscale:
+        type: string
+      cognome:
+        type: string
+      nome:
+        type: string
+      id_aura:
+        type: string
+      email:
+        type: string
+    title: MedicoMMG
+  medico_tipo_singolo:
+    type: object
+    properties:
+      cognome:
+        type: string
+      nome:
+        type: string
+      figura_professionale:
+        type: string
+    title: MedicoScreening
+  metadati_documento:
+    type: object
+    properties:
+      codice_azienda:
+        type: string
+      codice_documento_dipartimentale:
+        type: string
+      descrizione_azienda:
+        type: string
+      descrizione_struttura:
+        type: string
+      descrizione_unita_operativa:
+        type: string
+      matricola_up_dipartimentale:
+        type: integer
+        format: int32
+      data_validazione:
+        type: string
+        format: date
+      codice_tipo_documento:
+        type: string
+      descrizione_tipo_documento:
+        type: string
+      tipo_file:
+        type: string
+      codice_dipartimentale:
+        type: string
+      codice_tipo_documento_alto:
+        type: string
+      codice_assetto_organizzativo:
+        type: string
+      descrizione_assetto_organizzativo:
+        type: string
+      id_repository_cl:
+        type: string
+      identificativo_repository:
+        type: string
+      codice_tipo_firma:
+        type: string
+      descrizione_tipo_firma:
+        type: string
+      importo_ticket_pagato:
+        type: string
+      importo_ticket_da_pagare:
+        type: string
+      pagato_ticket:
+        type: string
+      oscura_scarico_cittadino:
+        type: string
+      leggi_speciali:
+        type: string
+      autore_smediazione:
+        type: string
+      data_smediazione:
+        type: string
+        format: date
+      coccarda:
+        type: string
+      flag_episodi_collegati:
+        type: boolean
+      flag_associazioni_nre:
+        type: boolean
+      flag_associazione_figli:
+        type: boolean
+      accession_number:
+        type: array
+        items:
+          type: string
+      stato_generazione_pacchetto:
+        type: string
+      medici:
+         type: array
+         items:
+           $ref: '#/definitions/medico'
+      episodio:
+        $ref: '#/definitions/episodio'
+      nre:
+        type: array
+        items:
+          type: string
+      tipo_contributo:
+        type: string
+    title: MetadatiDocumento
+  modalita_rilevazione:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione_regionale:
+        type: string
+      descrizione_nazionale:
+        type: string
+    title: ModalitaRilevazione
+  payload_comunicazione_consensi:
+    type: object
+    properties:
+      presa_in_carico:
+        type: boolean
+      struttura_utente:
+        type: string
+      tipo_attivita:
+        type: string
+      contesto_operativo:
+        type: string
+      identificativo_assistito_consenso:
+        type: string
+      identificativo_assistito_genitore_tutore:
+        type: string
+      identificativo_genitore_consenso:
+        type: string
+      identificativo_organizzazione:
+        type: string
+      identificativo_informativa:
+        type: string
+      consenso_alimentazione:
+        type: boolean
+      consenso_consultazione:
+        type: boolean
+      consenso_pregresso:
+        type: boolean
+    title: PayloadComunicazioneConsensi
+  payload_get_documento:
+    type: object
+    properties:
+      id_documento_ilec:
+        type: integer
+        format: int64
+      codice_componente_locale:
+        type: string
+      firmato:
+        type: string
+      codice_documento:
+        type: string
+      identificativo_repository:
+        type: string
+        description: S -> restiuisce il documento firmato (per scarico documento) N-> restituisce il documento non firmato (per visualizzazione del documento) Nel caso di necessit? di visualizzazione del documento CADES, passare N. In tutti gli altri casi (visualizzazione e download di CDA/PADES/CADES) passare sempre il valore S
+    title: PayloadGetDocumento
+  payload_get_rilevazioni:
+    type: object
+    properties:
+      lista_codice_gruppo:
+        type: array
+        items:
+          type: string
+      lista_codice_descrittore:
+        type: array
+        items:
+          type: string
+    title: PayloadGetRilevazioni
+  payload_recupera_documento:
+    type: object
+    properties:
+      identificativo_documento:
+        type: string
+      identificativo_repository:
+        type: string
+      identificativo_org_doc:
+        type: string
+      identificativo_organizzazione:
+        type: string
+      descrizione_organizzazione:
+        type: string
+      struttura_utente:
+        type: string
+      contesto_operativo:
+        type: string
+      tipo_documento:
+        type: string
+      presa_in_carico:
+        type: string
+      tipo_attivita:
+        type: string
+    title: PayloadRecuperaDocumento
+  payload_search_episodi:
+    type: object
+    properties:
+      categoria:
+        type: string
+      filtro_docs:
+        $ref: '#/definitions/filtro_date'
+      limit:
+        type: integer
+        format: int32
+      offset:
+        type: integer
+        format: int32
+      tipo_episodio:
+        type: string
+      tipologia_documento:
+        type: array
+        items:
+          type: string
+    title: PayloadSearchEpisodi
+  payload_search_miei_referti:
+    type: object
+    properties:
+      cit_id:
+        type: string
+      filtro_docs:
+        $ref: '#/definitions/filtro_date'
+      limit:
+        type: integer
+        format: int32
+      offset:
+        type: integer
+        format: int32
+      tipo_medico:
+        type: string
+    title: PayloadSearchMieiReferti
+  payload_search_tutti_doc:
+    type: object
+    properties:
+      tipo_medico:
+        type: string
+      categoria_tipologia:
+        type: array
+        items:
+          $ref: '#/definitions/categoria_tipologia'
+      filtro_docs:
+        $ref: '#/definitions/filtro_date'
+      limit:
+        type: integer
+        format: int32
+      offset:
+        type: integer
+        format: int32
+    title: PayloadSearchTuttiDoc
+  payload_set_audit:
+    type: object
+    properties:
+      cittadino_id:
+        type: string
+      codice_audit:
+        type: string
+      parametri:
+        type: array
+        items:
+          $ref: '#/definitions/codice'
+    title: PayloadSetAudit
+  paziente:
+    type: object
+    properties:
+      codice_fiscale:
+        type: string
+      cognome:
+        type: string
+      nome:
+        type: string
+      data_nascita:
+        type: string
+        format: date
+      comune_nascita:
+          $ref: '#/definitions/codice'
+      stato_nascita:
+          $ref: '#/definitions/codice'
+      sesso:
+        type: string
+      flag_registry_incarico:
+        type: boolean
+      id_asr:
+        type: string
+      id_aura:
+        type: string
+      id_irec:
+        type: string
+      codice_fiscale_mmg:
+        type: string
+    title: Paziente
+  rilevazione:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      valore_numerico:
+        type: integer
+        format: int32
+      valore_testuale:
+        type: string
+      data:
+        type: string
+        format: date
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+      unita_misura:
+        $ref: '#/definitions/codice'
+      gruppo:
+        $ref: '#/definitions/codice_ext'
+      descrittore:
+        $ref: '#/definitions/codice_ext'
+      modalita_rilevazione:
+        $ref: '#/definitions/modalita_rilevazione'
+    title: rilevazione
+  screening:
+    type: object
+    properties:
+      id_screening:
+        type: string
+      tipo_screening:
+        $ref: '#/definitions/codice'
+      esami:
+        type: array
+        items:
+          $ref: '#/definitions/esame_screening'
+  sintesi_documento:
+    type: object
+    properties:
+      categoria:
+        type: string
+      cit_id:
+        type: string
+      codice_cl:
+        type: string
+      id_documento_ilec:
+        type: integer
+        format: int64
+      numero_nosologico:
+        type: string
+      passaggio_ps:
+        type: string
+      paziente_piemontese:
+        type: boolean
+      metadati_documento:
+        $ref: '#/definitions/metadati_documento'
+      recupero_pregresso:
+        type: string
+    title: SintesiDocumento
+  sintomo:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      descrizione:
+        type: string
+      area_interessata:
+        type: string
+      data_inizio:
+        type: string
+      data_fine:
+        type: string
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+    title: Sintomo
+  stato_consenso:
+    type: object
+    properties:
+      consenso_alimentazione:
+        type: boolean
+      consenso_consultazione:
+        type: boolean
+      consenso_pregresso:
+        type: boolean
+      identificativo_assistito_consenso:
+        type: string
+      identificativo_informativa_consensi:
+        type: string
+      identificativo_informativa_corrente:
+        type: string
+    title: StatoConsenso
+  studi:
+    type: object
+    properties:
+      ambulatorio_pubblico:
+        type: string
+      denominazione:
+        type: string
+      giorni_apertura:
+        type: array
+        items:
+          $ref: '#/definitions/giorni_apertura'
+      indirizzo_studio:
+        $ref: '#/definitions/indirizzo_studio'
+    title: Studi
+  struttura:
+    title: 'Struttura'
+    description: Definisce una struttura
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Id univoco della struttura
+      codice:
+        type: string
+        description: Codice univoco della struttura
+      descrizione:
+        type: string
+        description: Descrizione della struttura
+  utente:
+    title: 'Utente'
+    description:
+      Contiene le informazioni relative all'utente loggato.
+    type: object
+    properties:
+      richiedente:
+        $ref: '#/definitions/utente_richiedente'
+      funzionalita_abilitate:
+        type: array
+        items:
+          $ref: '#/definitions/funzionalita'
+      cf_paziente:
+        type: string
+      tipo_documento:
+        type: string
+  utente_richiedente:
+    title: 'Utente richiedente'
+    description: Informazioni sul richiedente
+    type: object
+    properties:
+      codice_fiscale:
+        type: string
+        description: Il codice fiscale dell'utente
+      nome:
+        type: string
+        description: Il nome dell'utente
+      cognome:
+        type: string
+        description: Il cognome dell'utente
+      ruolo:
+        $ref: '#/definitions/codice'
+      collocazione:
+        $ref: '#/definitions/utente_richiedente_collocazione'
+  utente_richiedente_collocazione:
+    title: 'Utente richiedente collocazione'
+    type: object
+    properties:
+      codice_collocazione:
+        type: string
+      descrizione_collocazione:
+        type: string
+      codice_azienda:
+        type: string
+      descrizione_azienda:
+        type: string
+  taccuino:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      oscurato:
+        type: boolean
+      preferenze:
+        type: array
+        items:
+          $ref: '#/definitions/taccuino_preferenza'
+      nota_generale:
+        $ref: '#/definitions/taccuino_nota_generale'
+    title: Taccuino
+  taccuino_entita:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+    title: TaccuinoEntita
+  taccuino_gruppo:
+    type: object
+    properties:
+      codice:
+        type: string
+      descrizione:
+        type: string
+      descrizione_estesa:
+        type: string
+    title: TaccuinoGruppo
+  taccuino_nota_generale:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      stato_salute:
+        type: string
+      stile_vita:
+        type: string
+      data_creazione:
+        type: string
+        format: date
+      data_aggiornamento:
+        type: string
+        format: date
+    title: TaccuinoNotaGenerale
+  taccuino_preferenza:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      entita:
+        $ref: '#/definitions/taccuino_entita'
+      gruppo:
+        $ref: '#/definitions/taccuino_gruppo'
+    title: TaccuinoPreferenza
+  elenco_esenzioni:
+    type: array
+    items:
+      $ref: '#/definitions/esenzione'
+    title: ElencoEsenzioni
+  esenzione:
+    type: object
+    properties:
+      codice_esenzione:
+        $ref: '#/definitions/codice'
+      data_emissione:
+        type: string
+        format: date
+      data_scadenza:
+        type: string
+        format: date
+      diagnosi:
+        $ref: '#/definitions/codice'
+      ente_emittente:
+        $ref: '#/definitions/codice'
+    title: Esenzione
+  tipo_documento_categoria:  
+    type: object
+    properties:
+      codice_categoria:
+        type: string
+      descrizione_categoria:
+        type: string
+      tipi_documento:
+        type: array
+        items:
+          $ref: '#/definitions/tipo_documento'
+    title: TipoDocumentoCategoria
+  ruolo:
+    required:
+    - codice
+    properties:
+      codice:
+        type: string
+        example: MMG
+        description: codice del ruolo
+      descrizione:
+        type: string
+        description: descrizione del ruolo
+    title: Ruolo
+  collocazione:
+    properties:
+      codice_collocazione:
+        type: string
+        description: codice della collocazione
+      descrizione_collocazione:
+        type: string
+        description: descrizione della collocazione
+      codice_azienda:
+        type: string
+        description: codice dell'azienda
+      descrizione_azienda:
+        type: string
+        description: descrizione del azienda
+    title: Collocazione
+  scarico_studi:
+    type: object
+    properties:
+      cit_id:
+        type: string
+      id_referto:
+        type: string
+      periodo_conservazione:
+        type: integer
+        format: int32
+      pin:
+        type: string
+      accession_number:
+        type: array
+        items:
+          type: string
+      cod_cl:
+        type: string
+    title: ScaricoStudi
+  funzionalita:
+    properties:
+      codice:
+        type: string
+        description: codice della funzionalità
+      descrizione:
+        type: string
+        description: descrizione della funzionalità
+      codice_funzionalita_padre:
+        type: string
+        description: codice della funzionalità padre
+      descrizione_funzionalita_padre:
+        type: string
+        description: descrizione della funzionalità padre
+    title: Funzionalita
+  prestazione:
+    properties:
+      id:
+        type: integer
+        format: int64
+        description: id della prestazione
+      codice:
+        type: string
+        description: codice della prestazione
+      descrizione:
+        type: string
+        description: descrizione della prestazione
+      data_prestazione:
+        type: string
+        format: date
+        description: data della prestazione
+      branca:
+        $ref: '#/definitions/codice'
+    title: Prestazione
+  esito_ultimo_documento:
+    type: object
+    properties:
+      accession_number:
+        type: array
+        items:
+          type: string
+      data_validazione:
+        type: string
+        format: date-time
+      firmato_digitalmente:
+        type: string
+      flag_ultimo_documento:
+        type: boolean
+      fonte_oscuramento:
+        type: string
+      id_documento:
+        type: integer
+        format: int64
+      id_episodio:
+        type: integer
+        format: int64
+      luogo_produzione_documento:
+        $ref: '#/definitions/luogo_produzione_documento'
+      medico_validante:
+        type: string
+      medico_visita:
+        type: string
+      oid_documento:
+        type: string
+      oid_repository:
+        type: string
+      oscurato:
+        type: boolean
+      tipo_documento:
+        type: string
+      documento:
+        type: string
+    title: esitoUltimoDocumento
+  luogo_produzione_documento:
+    type: object
+    properties:
+      azienda:
+        $ref: '#/definitions/codice'
+      struttura:
+        $ref: '#/definitions/codice'
+      unita_operativa:
+        $ref: '#/definitions/codice'
+    title: LuogoProduzioneDocumento
+  documento:
+    type: object
+    properties:
+      allegato:
+        type: string
+      tipo_allegato:
+        type: string
+      nome_file:
+        type: string
+      trascrizione:
+        type: string
+      data_ora_aggiornamento:
+        type: string
+        format: date-time
+    title: Documento
+  verifica_stato_pacchetto:
+    type: object
+    properties:
+      stato_richiesta:
+        type: string
+      zip_name:
+        type: string
+      directory:
+        type: string
+      checksum:
+        type: string
+      arvchivio_documento_ilec:
+        type: string
+      cod_documento_dipartimentale:
+        type: string
+      id_documento_ilec:
+        type: number
+        format: int64
+  esito_get_rilevazioni:
+    type: object
+    properties:
+      numero_rilevazioni:
+        type: integer
+        format: int32
+      elenco_rilevazioni:
+        type: array
+        items:
+          $ref: '#/definitions/rilevazione'
+  esito_get_sintomi:
+    type: object
+    properties:
+      numero_sintomi:
+        type: integer
+        format: int32
+      elenco_sintomi:
+        type: array
+        items:
+          $ref: '#/definitions/sintomo'
+  esito_get_dolori:
+    type: object
+    properties:
+      numero_dolori:
+        type: integer
+        format: int32
+      elenco_dolori:
+        type: array
+        items:
+          $ref: '#/definitions/dolore'
+  esito_get_eventi:
+    type: object
+    properties:
+      numero_eventi:
+        type: integer
+        format: int32
+      elenco_eventi:
+        type: array
+        items:
+          $ref: '#/definitions/evento'
+  esito_get_farmaci:
+    type: object
+    properties:
+      numero_farmaci:
+        type: integer
+        format: int32
+      elenco_farmaci:
+        type: array
+        items:
+          $ref: '#/definitions/farmaco'
+  esito_get_diete:
+    type: object
+    properties:
+      numero_diete:
+        type: integer
+        format: int32
+      elenco_diete:
+        type: array
+        items:
+          $ref: '#/definitions/dieta'
+  esito_get_contatti_strutture:
+    type: object
+    properties:
+      numero_contatti_strutture:
+        type: integer
+        format: int32
+      elenco_contatti_strutture:
+        type: array
+        items:
+          $ref: '#/definitions/contatto-struttura'
+  esito_is_documento_mediabile:
+    type: object
+    properties:
+      mediabile:
+        type: boolean
+      esito:
+        $ref: '#/definitions/codice'
+  esito_is_documento_restituibile:
+    type: object
+    properties:
+      restituibile:
+        type: boolean
+      esito:
+        $ref: '#/definitions/codice'      

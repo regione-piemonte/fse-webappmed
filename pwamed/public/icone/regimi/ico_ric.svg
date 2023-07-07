@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85.012" height="76.982" viewBox="0 0 85.012 76.982">
+  <g id="Componente_81_1" data-name="Componente 81 – 1" transform="translate(1.012 1)">
+    <circle id="Ellisse_372" data-name="Ellisse 372" cx="5.5" cy="5.5" r="5.5" transform="translate(13 30.982)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <path id="Tracciato_65268" data-name="Tracciato 65268" d="M319.507,298.351V260.446A3.445,3.445,0,0,0,316.061,257h-8.615A3.445,3.445,0,0,0,304,260.446v3.446" transform="translate(-264.371 -257)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <rect id="Rettangolo_147682" data-name="Rettangolo 147682" width="11" height="14" rx="2" transform="translate(34 6.982)" fill="#73d7ff" stroke="#1e3a6d" stroke-width="2"/>
+    <line id="Linea_147" data-name="Linea 147" y2="14" transform="translate(3 53.982)" fill="none" stroke="#1e3a6d" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Linea_148" data-name="Linea 148" y1="14" transform="translate(79 53.982)" fill="none" stroke="#1e3a6d" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Linea_149" data-name="Linea 149" x1="76" transform="translate(3 61.982)" fill="none" stroke="#1e3a6d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Tracciato_65269" data-name="Tracciato 65269" d="M294,294.784v-6.892A6.892,6.892,0,0,1,300.892,281H340.52a6.892,6.892,0,0,1,6.892,6.892v6.892Z" transform="translate(-271.601 -240.752)" fill="none" stroke="#1e3a6d" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="Ellisse_373" data-name="Ellisse 373" cx="3.5" cy="3.5" r="3.5" transform="translate(76 67.982)" fill="#73d7ff" stroke="#1e3a6d" stroke-linecap="round" stroke-width="2"/>
+    <circle id="Ellisse_374" data-name="Ellisse 374" cx="3.5" cy="3.5" r="3.5" transform="translate(0 67.982)" fill="#73d7ff" stroke="#1e3a6d" stroke-linecap="round" stroke-width="2"/>
+    <path id="Tracciato_65270" data-name="Tracciato 65270" d="M360.257,299.507H300.863L282.9,290.529a3.447,3.447,0,0,1,3.084-6.165l16.5,8.251h57.768a3.446,3.446,0,0,1,0,6.892Z" transform="translate(-281 -245.201)" fill="#73d7ff" stroke="#1e3a6d" stroke-width="2"/>
+    <line id="Linea_150" data-name="Linea 150" y1="17" transform="translate(83 33.982)" fill="none" stroke="#1e3a6d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Tracciato_65271" data-name="Tracciato 65271" d="M281,277v24.122a3.445,3.445,0,0,0,3.446,3.446h17.23" transform="translate(-280.999 -250.261)" fill="none" stroke="#1e3a6d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Linea_151" data-name="Linea 151" y2="21" transform="translate(40 19.982)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+  </g>
+</svg>

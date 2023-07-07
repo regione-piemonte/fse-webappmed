@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="76" viewBox="0 0 55 76">
+  <g id="Componente_89_1" data-name="Componente 89 – 1" transform="translate(1 1)">
+    <rect id="Rettangolo_147689" data-name="Rettangolo 147689" width="53" height="74" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <line id="Linea_152" data-name="Linea 152" x2="21" transform="translate(6 40)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <line id="Linea_153" data-name="Linea 153" x2="41.337" transform="translate(5.96 48.5)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <line id="Linea_154" data-name="Linea 154" x2="41.337" transform="translate(5.96 57)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <line id="Linea_155" data-name="Linea 155" x2="41.337" transform="translate(5.96 65.5)" fill="none" stroke="#1e3a6d" stroke-width="2"/>
+    <g id="Raggruppa_22238" data-name="Raggruppa 22238" transform="translate(22.502 4.042)">
+      <g id="Raggruppa_22237" data-name="Raggruppa 22237" transform="translate(0 3)">
+        <ellipse id="Ellisse_382" data-name="Ellisse 382" cx="7.341" cy="7.772" rx="7.341" ry="7.772" transform="translate(5.161 4.778)" fill="#73d7ff"/>
+        <path id="Tracciato_65298" data-name="Tracciato 65298" d="M2462.533,1631.952l0,.008a7.836,7.836,0,0,1-2.176,3.446l-.008,0a7.719,7.719,0,0,1-3.615,1.9l0,.008a7.856,7.856,0,0,1-7.51-2.368,7.97,7.97,0,0,1-1.886-3.617l0-.008a7.835,7.835,0,0,1,.165-4.087l0-.008a7.83,7.83,0,0,1,2.174-3.438.008.008,0,0,1,.01-.005,7.843,7.843,0,0,1,7.678-1.727l.008,0a7.785,7.785,0,0,1,3.44,2.194,8.01,8.01,0,0,1,1.888,3.609l0,.008A7.841,7.841,0,0,1,2462.533,1631.952Z" transform="translate(-2442.462 -1617.094)" fill="rgba(0,0,0,0)" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Linea_161" data-name="Linea 161" x1="0.008" y1="0.002" transform="translate(17.885 18.31)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <ellipse id="Ellisse_380" data-name="Ellisse 380" cx="1.351" cy="1.356" rx="1.351" ry="1.356" transform="matrix(0.545, -0.839, 0.839, 0.545, 10.946, 8.828)" fill="#043575"/>
+        <path id="Tracciato_65299" data-name="Tracciato 65299" d="M2467.369,1663.6a1.356,1.356,0,1,1-.891-1.7A1.35,1.35,0,0,1,2467.369,1663.6Z" transform="translate(-2457.756 -1652.023)" fill="#fff"/>
+        <path id="Tracciato_65300" data-name="Tracciato 65300" d="M2480.258,1698.148a1.356,1.356,0,1,1-.891-1.7A1.351,1.351,0,0,1,2480.258,1698.148Z" transform="translate(-2468.968 -1682.077)" fill="#043575"/>
+        <ellipse id="Ellisse_381" data-name="Ellisse 381" cx="1.351" cy="1.356" rx="1.351" ry="1.356" transform="translate(10.925 13.067) rotate(-57.008)" fill="#043575"/>
+        <path id="Tracciato_65301" data-name="Tracciato 65301" d="M2531.822,1660.168a1.356,1.356,0,1,1-.891-1.7A1.35,1.35,0,0,1,2531.822,1660.168Z" transform="translate(-2513.824 -1649.037)" fill="#fff"/>
+        <path id="Tracciato_65302" data-name="Tracciato 65302" d="M2521.163,1702.96a1.356,1.356,0,1,1-.891-1.7A1.35,1.35,0,0,1,2521.163,1702.96Z" transform="translate(-2504.551 -1686.262)" fill="#fff"/>
+        <g id="Raggruppa_22229" data-name="Raggruppa 22229" transform="translate(14.268)">
+          <line id="Linea_162" data-name="Linea 162" y1="4.334" x2="1.352" transform="translate(0.635 0.624)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_163" data-name="Linea 163" x2="3.973" y2="1.248" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22230" data-name="Raggruppa 22230" transform="translate(4.979 0.543)">
+          <line id="Linea_164" data-name="Linea 164" x1="2.098" y1="4.023" transform="translate(1.844 0.968)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_165" data-name="Linea 165" y1="1.937" x2="3.689" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22231" data-name="Raggruppa 22231" transform="translate(0 6.854)">
+          <line id="Linea_166" data-name="Linea 166" x1="4.319" y1="1.357" transform="translate(0.622 1.993)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_167" data-name="Linea 167" y1="3.987" x2="1.244" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22232" data-name="Raggruppa 22232" transform="translate(0.428 15.962)">
+          <line id="Linea_168" data-name="Linea 168" x1="4.01" y2="2.105" transform="translate(0.965)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_169" data-name="Linea 169" x1="1.93" y1="3.702" transform="translate(0 0.254)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22233" data-name="Raggruppa 22233" transform="translate(6.726 20.001)">
+          <line id="Linea_170" data-name="Linea 170" x1="1.352" y2="4.334" transform="translate(1.987)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_171" data-name="Linea 171" x1="3.973" y1="1.248" transform="translate(0 3.709)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22234" data-name="Raggruppa 22234" transform="translate(15.576 19.797)">
+          <line id="Linea_172" data-name="Linea 172" x2="2.098" y2="4.023" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_173" data-name="Linea 173" x1="3.689" y2="1.937" transform="translate(0.253 3.055)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22235" data-name="Raggruppa 22235" transform="translate(19.855 14.917)">
+          <line id="Linea_174" data-name="Linea 174" x2="4.319" y2="1.357" transform="translate(0 0.637)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_175" data-name="Linea 175" x1="1.244" y2="3.987" transform="translate(3.697)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Raggruppa_22236" data-name="Raggruppa 22236" transform="translate(19.696 5.267)">
+          <line id="Linea_176" data-name="Linea 176" x1="3.925" y2="2.06" transform="translate(0 1.85)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <line id="Linea_177" data-name="Linea 177" x2="1.93" y2="3.702" transform="translate(2.96)" fill="none" stroke="#043575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
